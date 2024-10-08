@@ -20,7 +20,6 @@ public class MessageReceiver implements Runnable {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            //System.out.println("Connection is closed");
         }
     }
 }

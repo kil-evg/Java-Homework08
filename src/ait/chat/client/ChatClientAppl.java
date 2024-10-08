@@ -20,7 +20,6 @@ public class ChatClientAppl {
             sender.start();
 
             sender.join();
-           // receiver.join();
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
