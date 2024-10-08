@@ -15,12 +15,12 @@ public class ChatClientAppl {
         try (Socket socket = new Socket(serverHost, port)) {
             Thread receiver = new Thread(new MessageReceiver(socket));
             Thread sender = new Thread(new MessageSender(socket));
-
+            receiver.setDaemon(true);
             receiver.start();
             sender.start();
 
             sender.join();
-            receiver.join();
+           // receiver.join();
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
